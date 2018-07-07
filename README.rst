@@ -30,7 +30,21 @@ Zero Assumption Programming Python
 Features
 --------
 
-* TODO
+Based on functools.py, the goals are to :
+
+* research the one true way to do functional programming in python
+* use function properties to improve stability of program execution, even in hte face of hardware failures
+* use control theory to maximize the (optimization,determinism) tuple in unknown computing environments.
+
+Roadmap :
+
+* [ ] purity check (potentially using types) - foundation 1
+* [ ] use purity check to actually isolate computation (SECCOMP, VM, etc.) when possible
+* [ ] determinism/idempotency check (potentially using types) - foundation 2
+* [ ] use determinism/idempotency check to detect HW/underlying computing system failures
+* [ ] use determinism/idempotency check to recover from HW/underlying computing system failures
+* [ ] use determinism/idempotency check to optimise when possible (similar to functools.lru_cache)
+* [ ] implement a single @zap decorator that can provide extreme guarantees about the execution of the decorated function.
 
 Credits
 -------
